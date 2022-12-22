@@ -20,7 +20,7 @@ namespace FindTheFish
     /// </summary>
     public partial class MainWindow : Window
     {
-        ImageBrush? currentBrush = null;
+        ImageSource? currentImage;
 
         public MainWindow()
         {
@@ -29,23 +29,23 @@ namespace FindTheFish
 
         private void ButtonClicked_RosaStoi(object sender, RoutedEventArgs e)
         {
-            currentBrush = (ImageBrush)RosaStoi.Background;
+            currentImage = RosaStoi.Source;
         }
 
         private void ButtonClicked_RosaLezy(object sender, RoutedEventArgs e)
         {
-            currentBrush = (ImageBrush)RosaLezy.Background;
+            currentImage = RosaLezy.Source;
         }
 
         private void ButtonClicked_RosaPatrzy(object sender, RoutedEventArgs e)
         {
-            currentBrush = (ImageBrush)RosaPatrzy.Background;
+            currentImage = RosaPatrzy.Source;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Field_Clicked(object sender, MouseButtonEventArgs e)
         {
-            Button? button = sender as Button;
-            if (button != null && currentBrush != null) button.Background = currentBrush;
+            Image? image = sender as Image;
+            if (image != null && currentImage != null) image.Source = currentImage;
         }
     }
 }
