@@ -9,12 +9,16 @@
 
   <ItemGroup>
     <None Remove="BrunoMata.jpeg" />
+    <None Remove="Images\RosaPatrzy.jpg" />
     <None Remove="RosaLezy.jpg" />
+    <None Remove="RosaStoi.jpg" />
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="BrunoMata.jpeg" />
-    <Resource Include="RosaLezy.jpg" />
+    <Resource Include="Images\BrunoMata.jpeg" />
+    <Resource Include="Images\RosaPatrzy.jpg" />
+    <Resource Include="Images\RosaStoi.jpg" />
+    <Resource Include="Images\RosaLezy.jpg" />
   </ItemGroup>
 
 </Project>

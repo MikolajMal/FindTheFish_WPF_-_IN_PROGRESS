@@ -20,9 +20,32 @@ namespace FindTheFish
     /// </summary>
     public partial class MainWindow : Window
     {
+        ImageBrush? currentBrush = null;
+
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void ButtonClicked_RosaStoi(object sender, RoutedEventArgs e)
+        {
+            currentBrush = (ImageBrush)RosaStoi.Background;
+        }
+
+        private void ButtonClicked_RosaLezy(object sender, RoutedEventArgs e)
+        {
+            currentBrush = (ImageBrush)RosaLezy.Background;
+        }
+
+        private void ButtonClicked_RosaPatrzy(object sender, RoutedEventArgs e)
+        {
+            currentBrush = (ImageBrush)RosaPatrzy.Background;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Button? button = sender as Button;
+            if (button != null && currentBrush != null) button.Background = currentBrush;
         }
     }
 }

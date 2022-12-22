@@ -10,7 +10,7 @@
 
     <Grid>
         <Grid.Background>
-            <SolidColorBrush Color="#7F0075FF"/>
+            <SolidColorBrush Color="#7F08FF00"/>
         </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -22,6 +22,8 @@
             <RowDefinition Height="3*"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
+        
+        <!--Action buttons-->
         <Grid Grid.Column="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="5*"/>
@@ -35,7 +37,24 @@
                 <RowDefinition Height="5*"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
+            <Button x:Name="RosaStoi" Grid.Row="1" Click="ButtonClicked_RosaStoi">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Images/RosaStoi.jpg" Stretch="UniformToFill"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="RosaLezy" Grid.Row="1" Grid.Column="2" Click="ButtonClicked_RosaLezy">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Images/RosaLezy.jpg" Stretch="UniformToFill"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="RosaPatrzy" Grid.Row="1" Grid.Column="4" Click="ButtonClicked_RosaPatrzy">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Images/RosaPatrzy.jpg" Stretch="UniformToFill"/>
+                </Button.Background>
+            </Button>
         </Grid>
+        
+        <!--Board-->
         <Grid Grid.Row="1" Grid.Column="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
@@ -45,24 +64,24 @@
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <Button>
+            <Button Click="Button_Click">
                 <Button.Background>
-                    <ImageBrush ImageSource="/BrunoMata.jpeg" Stretch="UniformToFill"/>
+                    <ImageBrush ImageSource="/Images/BrunoMata.jpeg" Stretch="UniformToFill"/>
                 </Button.Background>
             </Button>
-            <Button Grid.Column="1">
+            <Button Grid.Column="1" Click="Button_Click">
                 <Button.Background>
-                    <ImageBrush ImageSource="/BrunoMata.jpeg" Stretch="UniformToFill"/>
+                    <ImageBrush ImageSource="/Images/BrunoMata.jpeg" Stretch="UniformToFill"/>
                 </Button.Background>
             </Button>
-            <Button Grid.Row="1">
+            <Button Grid.Row="1" Click="Button_Click">
                 <Button.Background>
-                    <ImageBrush ImageSource="/BrunoMata.jpeg" Stretch="UniformToFill"/>
+                    <ImageBrush ImageSource="/Images/BrunoMata.jpeg" Stretch="UniformToFill"/>
                 </Button.Background>
             </Button>
-            <Button Grid.Row="1" Grid.Column="1">
+            <Button Grid.Row="1" Grid.Column="1" Click="Button_Click">
                 <Button.Background>
-                    <ImageBrush ImageSource="/BrunoMata.jpeg" Stretch="UniformToFill"/>
+                    <ImageBrush ImageSource="/Images/BrunoMata.jpeg" Stretch="UniformToFill"/>
                 </Button.Background>
             </Button>
 
