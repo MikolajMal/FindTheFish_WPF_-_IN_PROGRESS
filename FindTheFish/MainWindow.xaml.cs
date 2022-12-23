@@ -33,27 +33,25 @@ namespace FindTheFish
         private void ButtonClicked_RosaStoi(object sender, RoutedEventArgs e)
         {
             currentImage = RosaStoi.Source;
-            
-            Grid.SetColumn(borderOfCurrentAction, Grid.GetColumn(RosaStoi));
-            Grid.SetRow(borderOfCurrentAction, Grid.GetRow(RosaStoi));
-            borderOfCurrentAction.BorderBrush = new SolidColorBrush(Colors.Black);
+            SetActionImageBorder(RosaStoi);
         }
 
         private void ButtonClicked_RosaLezy(object sender, RoutedEventArgs e)
         {
             currentImage = RosaLezy.Source;
-
-            Grid.SetColumn(borderOfCurrentAction, Grid.GetColumn(RosaLezy));
-            Grid.SetRow(borderOfCurrentAction, Grid.GetRow(RosaLezy));
-            borderOfCurrentAction.BorderBrush = new SolidColorBrush(Colors.Black);
+            SetActionImageBorder(RosaLezy);
         }
 
         private void ButtonClicked_RosaPatrzy(object sender, RoutedEventArgs e)
         {
             currentImage = RosaPatrzy.Source;
+            SetActionImageBorder(RosaPatrzy);
+        }
 
-            Grid.SetColumn(borderOfCurrentAction, Grid.GetColumn(RosaPatrzy));
-            Grid.SetRow(borderOfCurrentAction, Grid.GetRow(RosaPatrzy));
+        void SetActionImageBorder(Image selectedImage)
+        {
+            Grid.SetColumn(borderOfCurrentAction, Grid.GetColumn(selectedImage));
+            Grid.SetRow(borderOfCurrentAction, Grid.GetRow(selectedImage));
             borderOfCurrentAction.BorderBrush = new SolidColorBrush(Colors.Black);
         }
 
