@@ -48,6 +48,10 @@ namespace FindTheFish
             SetActionImageBorder(RosaPatrzy);
         }
 
+        /// <summary>
+        /// Updating border position of selected image
+        /// </summary>
+        /// <param name="selectedImage"></param>
         void SetActionImageBorder(Image selectedImage)
         {
             Grid.SetColumn(borderOfCurrentAction, Grid.GetColumn(selectedImage));
