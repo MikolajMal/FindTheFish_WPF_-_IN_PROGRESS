@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FindTheFish"
         mc:Ignorable="d"
-        Title="FindTheFish" Height="500" Width="400"
+        Title="FindTheFish" Height="440" Width="400"
         WindowStartupLocation="CenterScreen">
 
     <Grid>
@@ -14,32 +14,39 @@
         </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
-            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="240"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition/>
-            <RowDefinition Height="3*"/>
+            <RowDefinition Height="240"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
         
         <!--Action buttons-->
         <Grid x:Name="ActionButtonsGrid" Grid.Column="1">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="5*"/>
                 <ColumnDefinition/>
-                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="50"/>
                 <ColumnDefinition/>
-                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition/>
-                <RowDefinition Height="5*"/>
-                <RowDefinition/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="10"/>
             </Grid.RowDefinitions>
-            <Image x:Name="RosaStoi" Grid.Row="1" Source="/Images/RosaStoi.jpg" Stretch="UniformToFill" MouseDown="ButtonClicked_RosaStoi"/>
-            <Image x:Name="RosaLezy" Grid.Row="1" Grid.Column="2" Source="/Images/RosaLezy.jpg" Stretch="UniformToFill" MouseDown="ButtonClicked_RosaLezy"/>
-            <Image x:Name="RosaPatrzy" Grid.Row="1" Grid.Column="4" Source="/Images/RosaPatrzy.jpg" Stretch="UniformToFill" MouseDown="ButtonClicked_RosaPatrzy"/>
+            <Image x:Name="RosaStoi" Grid.Row="3" Grid.Column="1" Source="/Images/RosaStoi.jpg" Stretch="UniformToFill" MouseDown="ButtonClicked_RosaStoi"/>
+            <Image x:Name="RosaLezy" Grid.Row="3" Grid.Column="3" Source="/Images/RosaLezy.jpg" Stretch="UniformToFill" MouseDown="ButtonClicked_RosaLezy"/>
+            <Image x:Name="RosaPatrzy" Grid.Row="3" Grid.Column="5" Source="/Images/RosaPatrzy.jpg" Stretch="UniformToFill" MouseDown="ButtonClicked_RosaPatrzy"/>
+            <TextBlock Grid.Row="1" Grid.Column="1" Text="Block" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBlock Grid.Row="1" Grid.Column="3" Text="Check" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBlock Grid.Row="1" Grid.Column="5" Text="Reveal" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </Grid>
 
         <!--Board-->
